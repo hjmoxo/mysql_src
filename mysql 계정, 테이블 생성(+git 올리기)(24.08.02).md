@@ -1,5 +1,4 @@
 # mysql 첫 수업
-md문법 <https://velog.io/@genii-grace/.md-MarkDown-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC>
 우왕 리눅스에서 mysql 설치하고 할려니깐 힘들엇당ㅎㅎ 윈도우 짱.. 감사합니다 MS 
 
 ---
