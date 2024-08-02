@@ -37,9 +37,15 @@ commit;
 - - - 
 터미널 명령어 
 
-> sudo apt(or snap) install (설치하고 싶은 파일)
-
-> sudo rm rf (삭제하고 싶은 파일).*
+> 1. git, mysql 등 설치
+> >sudo apt(or snap) install (설치하고 싶은 것)(tap키 누르면 나옴!) 
+> 2. 삭제
+> >sudo rm rf (삭제하고 싶은 파일).* (* <- 이건 전부라는 뜻)
+> 3. 이동, 현재 디렉터리, 상위 디렉터리
+> > cd    .    ..
+> > > ex) 현재 폴더에 있는 모든 파일을 git 에 push 하고 싶다면 git add . 
+> 4. 현재 디렉터리 목록, 숨겨진 파일까지 보기
+> > ls    ls -a
 
 >> 터미널에서 mysql 접속
 >> 1. sudo mysql -u (테이블)
