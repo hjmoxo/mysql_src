@@ -35,8 +35,8 @@ commit;
 - - - 
 터미널 명령어 
 
-> sudo apt(or snap) install (설치하고 싶은 파일)
-> sudo rm rf (삭제하고 싶은 파일).*
+> 1. sudo apt(or snap) install (설치하고 싶은 파일)
+> 2. sudo rm rf (삭제하고 싶은 파일).*
 >> 터미널에서 mysql 접속
->> sudo mysql -u (테이블)
+>> 1. sudo mysql -u (테이블)
 
