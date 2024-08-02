@@ -20,6 +20,20 @@ git에 올리는 법
 
 끝 ~
 
+- - -
+mysql 계정, 테이블 생성
+
+``` mysql  
+
+create database (DB 이름);
+create user (user ID)@localhost identified by (비번);
+grant all privileges on (DB 이름). * to (user ID)@localhost;
+commit;
+
+```
+
+- - - 
+터미널 명령어 
 
 
 
