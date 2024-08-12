@@ -19,7 +19,7 @@ void loop() {
 
   cur_btn_val = digitalRead(buttonPin); // 현재값 저장 
 
-  if( (cur_btn_val==1) && (pre_btn_vla==0) ) {
+  if( (cur_btn_val==LOW) && (pre_btn_vla==HIGH) ) {
     
     if( led_flag == 0 ){
       digitalWrite(ledPin, HIGH);
@@ -30,7 +30,7 @@ void loop() {
       led_flag = 0;
     }
 
-    delay(300);
+    //delay(300);
 
   }
 
