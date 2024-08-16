@@ -8,6 +8,11 @@ const int ledPin2 = 5;
 const int buttonPin2 = 3;
 int led_flag2 = 0;
 
+unsigned long t1_prev = 0;
+const unsigned long t1_delay = 300;
+unsigned long t2_prev = 0;
+const unsigned long t2_delay = 500;
+
 // 사용자 함수 선언(인터럽트)
 // ISR(인터럽트 서비스 루틴)
 void buttonPressed(void) {
@@ -51,19 +56,25 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  if(led_flag == 1) {
-    digitalWrite(ledPin, HIGH);
-    delay(300);
-    digitalWrite(ledPin, LOW);
-    delay(300);
-  } 
+  unsigned long t1_now = millis();
+  unsigned long t2_now = millis();
 
-  if(led_flag2 == 1) {
-    digitalWrite(ledPin2, HIGH);
-    delay(500);
-    digitalWrite(ledPin2, LOW);
-    delay(500);
-  }     
+  if(t1_now - t1_prev >= t1_delay) {
+    t1_prev = t1_now;
+
+    if(led_flag == 1) { 
+    digitalWrite(ledPin, digitalRead(ledPin)?LOW:HIGH);
+    } 
+  }
+
+
+  if(t2_now - t2_prev >= t2_delay) {
+    t2_prev = t2_now;
+
+    if(led_flag2 == 1) { 
+    digitalWrite(ledPin2, digitalRead(ledPin2)?LOW:HIGH);
+    } 
+  }    
 
 }
 
