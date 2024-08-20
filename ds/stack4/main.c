@@ -3,12 +3,9 @@
 
 int main(){
 	Stack s1, s2;
-	//struct stack stacks[10];
-	
-	//s1.tos = 0;
-	//s2.tos = 0;
-	initStack(&s1);
-	initStack(&s2);
+
+	initStack(&s1, 10);
+	initStack(&s2, 100);
 	
 	push(&s1, 100);
 	push(&s1, 200);
@@ -18,8 +15,6 @@ int main(){
 	printf("s1 2st pop(): %d\n", pop(&s1));
 	printf("s1 3st pop(): %d\n", pop(&s1));
 	
-	//pop(&s1);
-	
 	push(&s2, 500);
 	push(&s2, 600);
 	push(&s2, 700);
@@ -27,6 +22,9 @@ int main(){
 	printf("s2 1st pop(): %d\n", pop(&s2));
 	printf("s2 2st pop(): %d\n", pop(&s2));
 	printf("s2 3st pop(): %d\n", pop(&s2));
+	
+	cleanupStack(&s1);
+	cleanupStack(&s2);
 
 	return 0;
 }

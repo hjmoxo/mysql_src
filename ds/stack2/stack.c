@@ -1,7 +1,7 @@
 #define STACKSIZE 100
 
-int stack[STACKSIZE];
-int tos;		//top of stack(index)
+static int stack[STACKSIZE];
+static int tos;		//top of stack(index)
 
 void push(int data){ 	//func. definition (라고도 불림)
 	stack[tos] = data;
@@ -10,11 +10,6 @@ void push(int data){ 	//func. definition (라고도 불림)
 
 int pop(void){
 	--tos;
-	
-	// int re;
-	// re = stack[tos];
-	// return re;
-	
 	return stack[tos];
 
 }
