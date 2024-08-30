@@ -3,6 +3,23 @@
 #include <cassert>
 #include<iostream>
 
+std::istream& operator>>(std::istream& in, Rational& rhs)
+{
+    int num, den;
+    in >> num;
+
+    if(in.peek() == '/') {
+        in.ignore();
+        in >> den;
+    }
+
+    if(in ) {
+        rhs = Rational(num, den);
+    }
+
+    return in;
+}
+
 std::ostream& operator<<(std::ostream& out, const Rational& rhs) {
     return out << rhs.num_ << "/" << rhs.den_ ;
 }

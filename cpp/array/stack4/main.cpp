@@ -1,31 +1,29 @@
+#include <iostream>
 #include "stack.h"
+#include "complex.h"
 
 int main() {
 
-    Stack<int> s1;
-    Stack<double> s2(20); 
-
+    Stack<int> s1; 
     s1.push(100);
     s1.push(200);
     s1.push(300);
 
     std::cout << "s1 1st pop(): " << s1.pop() << std::endl;
-    std::cout << "s1 1st pop(): " << s1.pop() << std::endl;
-    std::cout << "s1 1st pop(): " << s1.pop() << std::endl;
+    std::cout << "s1 2st pop(): " << s1.pop() << std::endl;
+    std::cout << "s1 3st pop(): " << s1.pop() << std::endl;
 
-    // for(int i=1; i<=10; ++i) {
-    //     if(!s2.isFull()) {
-    //         s2.push(i);
-    //     }
-    // }
+    Stack<Complex> s2;
+    s2.push(Complex(3.0, 4.0));
+    s2.push(Complex(5.0, 6.0));
+    s2.push(Complex(7.0, 8.0));
 
-    s2.push(1.1);
-    s2.push(2.2);
-    s2.push(3.3);
+    std::cout << "s2 1st pop(): " << s2.pop() << std::endl;
+    std::cout << "s2 2st pop(): " << s2.pop() << std::endl;
+    std::cout << "s2 3st pop(): " << s2.pop() << std::endl;
 
-    while(!s2.isEmpty()) {
-        std::cout << s2.pop() << std::endl;
-    }
+ 
+
 
     return 0;
 }

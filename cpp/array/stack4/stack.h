@@ -4,29 +4,28 @@
 #include "array.h"
 
 template <typename T>
-
 class Stack {
 private:
     static const int STACKSIZE;
 
-    Array arr_;     
-	T tos_;
+    Array<T> arr_;     
+	int tos_;
 
-    Stack(const Stack& ); 
-    Stack& operator=(const Stack& );
+    Stack(const Stack<T>& ); 
+    Stack<T>& operator=(const Stack<T>& );
 
 public:
-    explicit Stack<T>(int size = STACKSIZE);
+    explicit Stack(int size = STACKSIZE);
 
-    void push(int data);
-	int pop();
+    void push(const T& data);
+	const T pop();
 
     bool isFull() const;
     bool isEmpty() const;
 
 };
 
-//cpp
+//stack.cpp
 #include <cassert>
 
 template <typename T>
@@ -40,7 +39,7 @@ Stack<T>::Stack(int size)
 }
 
 template <typename T>
-void Stack<T>::push(int data) { 
+void Stack<T>::push(const T& data) { 
 	
 	assert(!isFull());
 
@@ -50,7 +49,7 @@ void Stack<T>::push(int data) {
 }
 
 template <typename T>
-int Stack<T>::pop() { 
+const T Stack<T>::pop() { 
 	
 	assert(!isEmpty());
 

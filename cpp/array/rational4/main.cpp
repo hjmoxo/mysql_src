@@ -29,5 +29,13 @@ int main() {
     std::cout << "r3: " << r3 << std::endl;
     std::cout << "r4: " << r4 << std::endl;
 
+    //추가된 부분 (24.08.30)
+    Rational r5;
+
+    std::cout << "input r5: ";
+    std::cin >> r5;
+
+    std::cout << "r5: " << r5 << std::endl;
+
     return 0;
 }
