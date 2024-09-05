@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>List Page</title>
+</head>
+
+<body>
+	<h2>List Page</h2>
+	<a href='/insert'>Insert Data</a>
+	<hr/>
+	<table>
+		<tr> <!-- ejs 문법이 여기서 사용됨! --> 
+			<th>DELETE</th>
+			<th>EDIT</th>
+			<th>ID</th>
+			<th>Temperature</th>
+			<th>Humidity</th>
+			<th>Time</th>
+		</tr>
+	<% dht.forEach(function(item,index){ %> <!-- 포이어쩌구 파이썬이랑 자바-->
+		<tr>
+			<td><a href='/delete/<%=item.id %>'>DELETE</a></td>
+			<td><a href='/edit/<%=item.id %>'>EDIT</a></td>
+			<td><%=item.id %></td>
+			<td align="center"><%=item.Temperature %></td>
+			<td align="center"><%=item.Humidity %></td>
+			<td><%=item.time %></td>
+		</tr>
+	<% }); %>
+	</table>
+</body>
+
+</html>

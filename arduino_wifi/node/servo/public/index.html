@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang=ko>
+  <head>
+    <title>Control LED on Arduino</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+  </head>
+  
+  <body>
+    <h2> Control Servo on Arduino </h2>
+    </br>
+    &nbsp; &nbsp; <a href="/increase"  target="response">Increase</a> 
+    </br></br>
+    &nbsp; &nbsp; <a href="/decrease" target="response">Decrease</a>
+    </br></br>
+	&nbsp; &nbsp; <a href="/preset1" target="response">Preset1</a>
+    </br></br>
+	&nbsp; &nbsp; <a href="/preset2" target="response">Preset2</a>
+    </br></br>
+	&nbsp; &nbsp; <a href="/preset3" target="response">Preset3</a>
+    </br></br>
+	&nbsp; &nbsp; <a href="/preset4" target="response">Preset4</a>
+    </br></br>
+	&nbsp; &nbsp; <a href="/preset5" target="response">Preset5</a>
+    </br></br>
+    
+    <table border="0">
+      <tr>
+        <td rowspan="2">Status Message: </br> &nbsp;</br> &nbsp;</td>
+        <td>
+          <iframe src="about:blank" width="129" height="35" frameborder="0"
+          marginwidth="0" marginheight="0" scrolling="no" name="response"></iframe>
+          <p></p>
+        </td>
+      </tr>
+      <tr>
+        <td> &nbsp; </td>
+      </tr>
+    </table>
+    
+    <script src="javascripts/jquery-1.12.4.min.js"></script>
+    <!-- script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script -->
+    <script>
+      function led_on(){
+        document.getElementById("ld").src = "./images/onRed.gif";
+      }
+      
+      function led_off(){
+        document.getElementById("ld").src = "./images/offRed.gif";
+      }
+    </script>
+  </body>
+</html>
