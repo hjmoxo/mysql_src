@@ -7,6 +7,10 @@ https://github.com/greattoe/proj4power_saving
 
 보면 됨 
 
+https://blog.naver.com/thumbdown
+
+이건 강사님 블로그 주소
+
 -------------------
 24.09.06
 
