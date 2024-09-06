@@ -7,8 +7,13 @@ https://github.com/greattoe/proj4power_saving
 
 보면 됨 
 
+-------------------
 24.09.06
+
 node++ 설치하기 
+
 express (파일명)
+
 npm i (+serialport)(+socketio)
+
 localhost 번호 바꾸기 
