@@ -11,6 +11,10 @@ https://blog.naver.com/thumbdown
 
 이건 강사님 블로그 주소
 
+https://www.dropbox.com/scl/fo/ww536ynjiahb2c08vjc5d/AInMYW8R8mI9vVUa7H5Seyg/__2024AIoT_Robot?rlkey=cx1c7uz1psesfw2nqrtjttvy4&subfolder_nav_tracking=1&dl=0
+
+포폴 보고서 작성하기! 
+
 -------------------
 24.09.06
 
