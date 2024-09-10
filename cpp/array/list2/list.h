@@ -2,14 +2,17 @@
 #define LIST_H
 
 struct Node {
-private:
+friend class List;
 
-public:
+private:
 	int data;
 	Node *next;
 
 	Node(int data, Node *next);
 	~Node();
+
+	Node(const Node& rhs);				// is not used
+	Node& operator=(const Node& rhs);
 };
 
 class List {
