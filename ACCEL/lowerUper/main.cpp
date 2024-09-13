@@ -2,6 +2,21 @@
 #include <vector>
 #include <string>
 
+bool isUpper(std::string s)
+{
+    bool result = false;
+
+    for( std::string::const_iterator it = s.cbegin(); it != s.cend(); ++it ) {
+        //if(*it >= 'A' && *it <= 'Z') {
+        if(isupper(*it)) { // isupper이라는 함수가 잇음 이열 
+            result = true;
+            break;
+        }
+    }
+
+    return result;
+}
+
 int main() 
 {
     std::vector<std::string> lower, upper;
@@ -15,9 +30,13 @@ int main()
         }
     }
 
-    // print low
+    for(std::vector<std::string>::const_iterator it = lower.cbegin(); it != lower.cend(); ++it) {
+        std::cout << "lower: " << *it << std::endl;
+    }
 
-    // print upper 
+    for(auto it = upper.cbegin(); it != upper.cend(); ++it) {
+        std::cout << "upper: " << *it << std::endl;
+    }
 
     return 0;
 }
