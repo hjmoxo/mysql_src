@@ -1,0 +1,30 @@
+lidar.getXV() 좌표 객체 반환
+lidar.getMap(limit_distance, size) map 좌표
+
+=========Util========
+import cv2
+from pop import Util // OpenCV 사용할려면 이렇게 
+Util.enable_imshow() // 객체 생성
+img = cv2.imread(filename, cv2.IMERADCOLOR) // 이미지 읽어옴
+cv2.imshow("filename.img", img) // 이미지 출력
+
+cam = Util.gstrmer(width, height) // 카메라 해상도
+cv2.VideoCapture(cam, cv2.CAP_GSTREAMER) // 카메라 접근
+camera.isOpened() // 카메라 오픈 확인 
+camera.read() // 카메라 읽어옴 
+ex) for _ in range(120): // 120프레임 카메라 값 읽어옴
+	ret, frame = camera.read() // 카메라 정수값 읽어옴, ret은 카메라가 값을 잘 읽어왔나
+				확인용인데 없으면 안됨
+	if not ret:
+	    break
+
+fourcc = cv2.VideoWriter_fourcc(*"X264")
+out = cv2.VideoWriter("soda.avi", fourcc, 30, (640, 480)) // 640*480에 30프레임 soda.avi로 저장
+
+cv2.Canny(frame, 100, 200) // 이미지 외각 검출 (프레임, 최소, 최대) 
+
+얼굴 인식 알고리즘 있음 pdf 파일 ㄱ
+
+camera.release()
+cv2.destroyAllWindows() 카메라 닫기~~ 
+
